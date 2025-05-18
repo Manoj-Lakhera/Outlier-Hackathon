@@ -1,0 +1,134 @@
+body{
+    text-align: center;
+    background-color: black ;
+    /* background-image: url("src/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* background-attachment: fixed;  */
+    margin-top: 30px;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+}
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h1 {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease;
+}
+
+h1:active {
+  text-shadow: 0 0 10px #fff, 0 0 30px #0ff, 0 0 50px #0ff;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 5px solid black;
+    margin: 2.5rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.yellow{
+    background-color: #f99b45;
+}
+
+.red{
+    background-color: #d95980;
+}
+.green{
+    background-color: #63aac0;
+}
+.purple{
+    background-color: #ab81f9;
+}
+.flash{
+    background-color: white;
+}
+.userflash{
+    background-color: rgb(60, 247, 60);
+}
+.btn {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.6s ease-out forwards;
+}
+
+#green { animation-delay: 0.2s; }
+#red   { animation-delay: 0.4s; }
+#yellow{ animation-delay: 0.6s; }
+#blue  { animation-delay: 0.8s; }
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.glow {
+  box-shadow: 0 0 12px white, 0 0 12px white, 0 0 12px white;
+}
+
+.red:hover {
+  transform: scale(1.08);
+  border: 5px solid white;
+  box-shadow: 0 0 15px #d95980, 0 0 30px #d95980, 0 0 45px #d95980;
+}
+.green:hover {
+  transform: scale(1.08);
+  border: 5px solid white;
+  box-shadow: 0 0 15px #63aac0, 0 0 30px #63aac0, 0 0 45px #63aac0;
+}
+.purple:hover {
+  transform: scale(1.08);
+  border: 5px solid white;
+  box-shadow: 0 0 15px #ab81f9, 0 0 30px #ab81f9, 0 0 45px #ab81f9;
+}
+.yellow:hover {
+  transform: scale(1.08);
+  border: 5px solid white;
+  box-shadow: 0 0 15px #f99b45, 0 0 30px #f99b45, 0 0 45px #f99b45;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+  color: white;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+h2 {
+  animation: blink  3s infinite;
+}
+
+.glow-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border-radius: 60%;
+  pointer-events: none;
+  background: white;
+  box-shadow: 0 0 10px rgb(108, 232, 232), 0 0 20px rgb(198, 239, 248);
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s, left 0.05s;
+}
+
